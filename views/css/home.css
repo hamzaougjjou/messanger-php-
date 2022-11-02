@@ -1,0 +1,115 @@
+@import url("./../style.css");
+
+body{
+    overflow: hidden;
+}
+.container .row {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: auto 1fr;
+}
+
+.container .users-container {
+    overflow: auto;
+    max-width: 100%;
+    max-height: 700px;
+}
+.container .users-container > h1{
+    padding: 10px;
+    color: rgb(0, 110, 255);
+}
+
+.container .users-container .users {
+    margin: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .users-container .users .user-item {
+    width: 150px;
+    height: 200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+        0 6px 6px rgba(0, 0, 0, 0.23);
+    overflow: hidden;
+    position: relative;
+}
+.container .users-container .users .user-item .img{
+    max-width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    /* background-repeat: no-repeat; */
+    background-size: cover !important;
+    background-position: center center !important;
+    /* background-position: center center; */
+}
+
+.container .users-container .users .user-item .name{
+    padding: 5px;
+    word-break: break-all;
+}
+.container .users-container .users .user-item a{
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    width: calc( 100% - 6px );
+    text-align: center;
+    padding: 10px 0;
+    color: whitesmoke;
+    background-color: rgb(0, 132, 255);
+    font-weight: 700;
+    font-size: 12px;
+}
+/* ============================================= */
+.search {
+    width: 100%;
+    height: 90px;
+    background-color: #FAFAFA;
+    border-bottom: solid 1px #E0E0E0;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E0E0E0;
+}
+.search .searchbar {
+    height: 40px;
+    background-color: #FFF;
+    width: 70%;
+    padding: 0 20px;
+    border-radius: 50px;
+    border: 1px solid #EEEEEE;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.search .searchbar input {
+    margin-left: 15px;
+    height: 38px;
+    width: 100%;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    ;
+}
+#btn-cancel-search{
+    color: red;
+    transition: .5s;
+    font-size: 20px;
+}
+#btn-cancel-search:hover{
+    transform: rotate(360deg);
+}
+.search .searchbar *::-webkit-input-placeholder {
+    color: #E0E0E0;
+}
+.search .searchbar input *:-moz-placeholder {
+    color: #E0E0E0;
+}
+.search .searchbar input *::-moz-placeholder {
+    color: #E0E0E0;
+}
+.search .searchbar input *:-ms-input-placeholder {
+    color: #E0E0E0;
+}
